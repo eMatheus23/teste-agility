@@ -33,7 +33,7 @@
 
 
               <h3 class="user__name">{{ $user->name }}</h3>
-              <a class="user__email" href="mailto:contato@somosagility.com.br">
+              <a class="user__email" href="mailto:{{ $user->email }}">
                 <span>{{ $user->email }}</span>
               </a>
               <p class="user__customer">
@@ -59,9 +59,24 @@
 
         <aside>
           <form class="page__filter">
-            <input type="text" name="name" placeholder="Nome">
-            <input type="email" name="email" placeholder="Email">
-            <input type="text" name="costumer" placeholder="Cliente">
+            <h3>Deseja filtrar os resultados?</h3>
+
+            <div class="input-container">
+              <label for="name">Nome</label>
+              <input type="text" name="name">
+            </div>
+
+            <div class="input-container">
+              <label for="email">E-mail</label>
+              <input type="email" name="email">
+            </div>
+
+            <div class="input-container">
+              <label for="company">Empresa</label>
+              <input type="text" name="costumer">
+            </div>
+
+            <button class="filter-button">FILTAR</button>
           </form>
         </aside>
       </div>

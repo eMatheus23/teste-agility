@@ -97,6 +97,7 @@
     .user__status {
       margin-bottom: 0.6rem;
       font-size: 1.4rem;
+      font-weight: bold;
 
       strong {
         color: #ff7e65;
@@ -110,23 +111,71 @@
     &::before {
       content: "";
       position: absolute;
-      top: -0.6rem;
-      left: -2.6rem;
+      top: -9px;
+      left: -39px;
       transform: rotate(-45deg);
 
       border-style: solid;
       border-color: #ff7e65 transparent;
-      border-width: 0rem 4rem 4rem 4rem;
+      border-width: 0rem 6rem 6rem 6rem;
     }
 
     .user__customer {
       font-size: 1.6rem;
-      font-weight: bold;
     }
   }
 
   aside {
     width: 33%;
+    height: 50rem;
+    padding: 7rem 5rem;
     border: 1px solid #4f6ff5;
+
+    h3 {
+      font-size: 2.7rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .input-container {
+      position: relative;
+      margin-bottom: 3.5rem;
+    }
+
+    input {
+      width: 100%;
+      height: 4.2rem;
+      padding: 0px 3rem;
+      border: 1px solid #5173f1;
+      border-radius: 4.2rem;
+      color: #4e4e4e;
+      font-size: 1.6rem;
+
+      &:focus {
+        background: #eff2fe;
+      }
+    }
+
+    label {
+      position: absolute;
+      left: 20px;
+      top: -0.5em;
+      display: inline-block;
+      padding: 0px 10px;
+      background-color: #fff;
+      color: #5173f1;
+      font-size: 12px;
+      line-height: 1em;
+    }
+
+    .filter-button {
+      width: 100%;
+      height: 4rem;
+      background-color: #5173f1;
+      border-radius: 2rem;
+      border: 0;
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
   }
 }
