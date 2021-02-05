@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  color: #4f6ff5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+button {
+  font-family: "muli", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 700;
+}
+
+button {
+  cursor: pointer;
+}
+
+:root {
+  /* ----- FONTES ----- */
+  /* Tamanho da fonte padrão: 16px - 100% - 1rem */
+  /* Tamanho da fonte no projeto: 10px - 62.5% - 1rem */
+  font-size: 62.5%; /* controle das medidas rem */
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}

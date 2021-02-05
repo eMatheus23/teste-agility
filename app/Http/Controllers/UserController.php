@@ -38,6 +38,12 @@ class UserController extends Controller
         $collection = collect($users);
         $sorted = $collection->sortBy('customer', SORT_NATURAL);
 
-        return $sorted->values()->all();
+        $sorted_users = $sorted->values()->all();
+
+        // dd($sorted_users);
+
+        // return $sorted_users;
+        // return view('listUser')->with(['users' => $sorted_users]);
+        return view('listUser')->with(['users' => json_decode(json_encode($sorted_users))]);
     }
 }

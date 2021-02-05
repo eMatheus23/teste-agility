@@ -1,0 +1,114 @@
+#landing-page {
+  width: 100vw;
+  height: 100vh;
+}
+#landing-page .content-wrapper {
+  width: 100%;
+  max-width: 153rem;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+#landing-page .page__hero {
+  position: relative;
+  width: 100%;
+  height: 21.7rem;
+  background: #4f6ff5;
+}
+#landing-page .page__hero .content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  align-items: flex-end;
+}
+#landing-page .page__hero .content-wrapper h1 {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+  color: #fff;
+  font-size: 4.1rem;
+}
+#landing-page .page__hero .content-wrapper h1 img {
+  width: 6.1rem;
+  margin-right: 2rem;
+}
+#landing-page main {
+  display: flex;
+  width: 100%;
+  padding-top: 4rem;
+  background: #fff;
+}
+#landing-page main .content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+#landing-page .user-cards__container {
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+#landing-page .user__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25rem;
+  height: 27rem;
+  margin-bottom: 5rem;
+  background: #fff;
+  border: 1px solid #4f6ff5;
+}
+#landing-page .user__card .profile__img {
+  width: 9rem;
+  margin-bottom: 1.4rem;
+}
+#landing-page .user__card .user__name {
+  margin-bottom: 0.6rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+#landing-page .user__card .user__email {
+  margin-bottom: 0.6rem;
+  font-size: 1.2rem;
+  color: #6a6a6a;
+}
+#landing-page .user__card .user__email:hover {
+  color: #ff7e65;
+}
+#landing-page .user__card .user__customer,
+#landing-page .user__card .user__status {
+  margin-bottom: 0.6rem;
+  font-size: 1.4rem;
+}
+#landing-page .user__card .user__customer strong,
+#landing-page .user__card .user__status strong {
+  color: #ff7e65;
+}
+#landing-page .highlight {
+  position: relative;
+}
+#landing-page .highlight::before {
+  content: "";
+  position: absolute;
+  top: -0.6rem;
+  left: -2.6rem;
+  transform: rotate(-45deg);
+  border-style: solid;
+  border-color: #ff7e65 transparent;
+  border-width: 0rem 4rem 4rem 4rem;
+}
+#landing-page .highlight .user__customer {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+#landing-page aside {
+  width: 33%;
+  border: 1px solid #4f6ff5;
+}
+
+/*# sourceMappingURL=styles.css.map */
