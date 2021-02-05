@@ -10,7 +10,7 @@ O desafio objetivo da aplicação é consumir dois end-points que retornam objet
 Como a criação do design era livre, tentei criar elementos compatíveis com a filosofia de design do site da empresa. 
 
 <p align="center">
-  <img alt="design do projeto" width="80%" src="public/img/print-01.jpg" />
+  <img alt="design do projeto" width="95%" src="public/img/print-01.jpg" />
 <p>
 
 ## Checklist
