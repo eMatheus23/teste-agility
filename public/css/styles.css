@@ -1,6 +1,6 @@
 #landing-page {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 #landing-page .content-wrapper {
   width: 100%;
@@ -39,41 +39,82 @@
   display: flex;
   width: 100%;
   padding-top: 4rem;
+  padding-bottom: 6rem;
   background: #fff;
 }
 #landing-page main .content-wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 5rem;
+}
+@media screen and (max-width: 1000px) {
+  #landing-page main .content-wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
 #landing-page .user-cards__container {
-  width: 65%;
+  width: 62%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
+}
+@media screen and (max-width: 1280px) {
+  #landing-page .user-cards__container {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #landing-page .user-cards__container {
+    width: 100%;
+    max-width: unset;
+  }
 }
 #landing-page .user__card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 25rem;
-  height: 27rem;
+  width: 32%;
+  min-width: 24rem;
+  max-width: 27rem;
+  height: 30rem;
   margin-bottom: 5rem;
   background: #fff;
   border: 1px solid #4f6ff5;
 }
-#landing-page .user__card .profile__img {
-  width: 9rem;
+@media screen and (max-width: 1280px) {
+  #landing-page .user__card {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 640px) {
+  #landing-page .user__card {
+    width: 100%;
+    max-width: 32rem;
+    height: 35rem;
+  }
+}
+#landing-page .user__card .profile-img__container {
+  display: flex;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  background-color: #f9faff;
   margin-bottom: 1.4rem;
 }
+#landing-page .user__card .profile-img__container .profile-img {
+  width: 7rem;
+  margin: auto;
+}
 #landing-page .user__card .user__name {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
   font-size: 1.8rem;
   text-align: center;
 }
 #landing-page .user__card .user__email {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
   font-size: 1.2rem;
   color: #6a6a6a;
 }
@@ -82,7 +123,7 @@
 }
 #landing-page .user__card .user__customer,
 #landing-page .user__card .user__status {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
   font-size: 1.4rem;
   font-weight: bold;
 }
@@ -106,21 +147,28 @@
 #landing-page .highlight .user__customer {
   font-size: 1.6rem;
 }
-#landing-page aside {
+#landing-page aside.filter__container {
   width: 33%;
+  max-width: 48rem;
   height: 50rem;
-  padding: 7rem 5rem;
+  padding: 7rem clamp(2rem, 4%, 5rem);
   border: 1px solid #4f6ff5;
 }
-#landing-page aside h3 {
+@media screen and (max-width: 1000px) {
+  #landing-page aside.filter__container {
+    width: 100%;
+    max-width: unset;
+  }
+}
+#landing-page aside.filter__container h3 {
   font-size: 2.7rem;
   margin-bottom: 3.5rem;
 }
-#landing-page aside .input-container {
+#landing-page aside.filter__container .input-container {
   position: relative;
   margin-bottom: 3.5rem;
 }
-#landing-page aside input {
+#landing-page aside.filter__container input {
   width: 100%;
   height: 4.2rem;
   padding: 0px 3rem;
@@ -129,10 +177,10 @@
   color: #4e4e4e;
   font-size: 1.6rem;
 }
-#landing-page aside input:focus {
+#landing-page aside.filter__container input:focus {
   background: #eff2fe;
 }
-#landing-page aside label {
+#landing-page aside.filter__container label {
   position: absolute;
   left: 20px;
   top: -0.5em;
@@ -143,7 +191,7 @@
   font-size: 12px;
   line-height: 1em;
 }
-#landing-page aside .filter-button {
+#landing-page aside.filter__container .filter-button {
   width: 100%;
   height: 4rem;
   background-color: #5173f1;
@@ -152,6 +200,21 @@
   color: #fff;
   font-size: 1.4rem;
   font-weight: bold;
+}
+#landing-page .page__footer {
+  width: 100%;
+  height: 10rem;
+  border-top: 1px solid rgba(112, 112, 112, 0.25);
+}
+#landing-page .page__footer .content-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+#landing-page .page__footer h6 {
+  margin: auto;
+  color: #4e4e4e;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=styles.css.map */

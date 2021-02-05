@@ -1,6 +1,12 @@
+// Break points
+$phone: 640px;
+$tabletPortrait: 1000px;
+$tablet: 1280px;
+$desktop: 1800px;
+
 #landing-page {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 
   .content-wrapper {
     width: 100%;
@@ -45,20 +51,36 @@
     display: flex;
     width: 100%;
     padding-top: 4rem;
+    padding-bottom: 6rem;
     background: #fff;
 
     .content-wrapper {
       display: flex;
       justify-content: space-between;
+      gap: 5rem;
+
+      @media screen and (max-width: $tabletPortrait) {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
     }
   }
 
   .user-cards__container {
-    width: 65%;
+    width: 62%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
+
+    @media screen and (max-width: $tablet) {
+      justify-content: space-evenly;
+    }
+
+    @media screen and (max-width: $tabletPortrait) {
+      width: 100%;
+      max-width: unset;
+    }
   }
 
   .user__card {
@@ -66,25 +88,46 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 25rem;
-    height: 27rem;
+    width: 32%;
+    min-width: 24rem;
+    max-width: 27rem;
+    height: 30rem;
     margin-bottom: 5rem;
     background: #fff;
     border: 1px solid #4f6ff5;
 
-    .profile__img {
-      width: 9rem;
+    @media screen and (max-width: $tablet) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: $phone) {
+      width: 100%;
+      max-width: 32rem;
+      height: 35rem;
+    }
+
+    .profile-img__container {
+      display: flex;
+      width: 13rem;
+      height: 13rem;
+      border-radius: 50%;
+      background-color: #f9faff;
       margin-bottom: 1.4rem;
+
+      .profile-img {
+        width: 7rem;
+        margin: auto;
+      }
     }
 
     .user__name {
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.8rem;
       font-size: 1.8rem;
       text-align: center;
     }
 
     .user__email {
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.8rem;
       font-size: 1.2rem;
       color: #6a6a6a;
 
@@ -95,7 +138,7 @@
 
     .user__customer,
     .user__status {
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.8rem;
       font-size: 1.4rem;
       font-weight: bold;
 
@@ -125,11 +168,17 @@
     }
   }
 
-  aside {
+  aside.filter__container {
     width: 33%;
+    max-width: 48rem;
     height: 50rem;
-    padding: 7rem 5rem;
+    padding: 7rem clamp(2rem, 4%, 5rem);
     border: 1px solid #4f6ff5;
+
+    @media screen and (max-width: $tabletPortrait) {
+      width: 100%;
+      max-width: unset;
+    }
 
     h3 {
       font-size: 2.7rem;
@@ -176,6 +225,24 @@
       color: #fff;
       font-size: 1.4rem;
       font-weight: bold;
+    }
+  }
+
+  .page__footer {
+    width: 100%;
+    height: 10rem;
+    border-top: 1px solid rgba(112, 112, 112, 0.25);
+
+    .content-wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+    }
+
+    h6 {
+      margin: auto;
+      color: #4e4e4e;
+      font-size: 12px;
     }
   }
 }

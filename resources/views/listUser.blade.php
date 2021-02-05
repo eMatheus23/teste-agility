@@ -16,21 +16,25 @@
 
 <body>
   <div id="landing-page">
-    <article class="page__hero">
+    <header class="page__hero">
       <div class="content-wrapper">
-        <h1> <img src={{ asset('img/svgexport-7.svg') }} alt=""> Listagem de Usuários</h1>
+        <h1>
+          <img src={{ asset('img/svgexport-7.svg') }} alt="Logo da página">
+          Listagem de Usuários
+        </h1>
       </div>
-
-      {{-- <img src={{ asset('img/hero-img.jpg') }} alt=""> --}}
-    </article>
+    </header>
 
     <main>
       <div class="content-wrapper">
+
         <div class="user-cards__container">
           @foreach ($users as $user)
             <div class="user__card @if ($user->customer == 'Agility') highlight @endif">
-              <img class="profile__img" src={{ asset('img/svgexport-10.svg') }} alt="">
 
+              <div class="profile-img__container">
+                <img class="profile-img" src={{ asset('img/svgexport-10.svg') }} alt="">
+              </div>
 
               <h3 class="user__name">{{ $user->name }}</h3>
               <a class="user__email" href="mailto:{{ $user->email }}">
@@ -50,16 +54,14 @@
 
                 {{ $user->status }}
               </p>
-
-
             </div>
           @endforeach
         </div>
 
 
-        <aside>
-          <form class="page__filter">
-            <h3>Deseja filtrar os resultados?</h3>
+        <aside class="filter__container">
+          <form action="{{ route('filter') }}">
+            <h3>Deseja filtrar os <br> resultados?</h3>
 
             <div class="input-container">
               <label for="name">Nome</label>
@@ -72,15 +74,23 @@
             </div>
 
             <div class="input-container">
-              <label for="company">Empresa</label>
-              <input type="text" name="costumer">
+              <label for="customer">Empresa</label>
+              <input type="text" name="customer">
             </div>
 
-            <button class="filter-button">FILTAR</button>
+            <button type="submit" class="filter-button">FILTAR</button>
           </form>
         </aside>
       </div>
     </main>
+
+    <footer class="page__footer">
+      <div class="content-wrapper">
+        <h6>
+          © 2021 Agility. All rights reserved.
+        </h6>
+      </div>
+    </footer>
   </div>
 </body>
 
