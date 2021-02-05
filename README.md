@@ -33,7 +33,7 @@ Como a criação do design era livre, tentei criar elementos compatíveis com a 
 ## Executando a aplicação
 git clone https://github.com/eMatheus23/teste-agility
 
-cd agility
+cd teste-agility
 
 composer install
 
